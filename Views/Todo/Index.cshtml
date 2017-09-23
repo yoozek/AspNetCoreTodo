@@ -33,11 +33,22 @@
     </table>
 
     <div class="panel-footer add-item-form">
+        <h4>Add new item</h4>
         <form>
-            <div id="add-item-error" class="text-danger"></div>
-            <label for="add-item-title">Add a new item:</label>
-            <input id="add-item-title">
-            <button type="button" id="add-item-button">Add</button>
+            <div id="add-item-error" class="alert alert-danger"></div>
+            <div class="row equal form-group">
+                <div class="col-sm-4">
+                    <label for="add-item-title">Title</label>
+                    <input id="add-item-title" class="form-control">  
+                </div>
+                <div class="col-sm-4">
+                    <label for="add-item-dueDate">Due date</label>
+                    <input id="add-item-dueDate" type='datetime-local' class="form-control"/>
+                </div>
+                <div class="col-sm-4 add-button-col">
+                    <button id="add-item-button" type="button" class="btn btn-success btn-block">Add</button>
+                </div>
+            </div>
         </form>
     </div>
 </div>

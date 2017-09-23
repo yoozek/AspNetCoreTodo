@@ -2,6 +2,12 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
+      "BuildBundlerMinifier/2.5.357": {
+        "type": "package",
+        "build": {
+          "build/BuildBundlerMinifier.targets": {}
+        }
+      },
       "Humanizer/2.2.0": {
         "type": "package",
         "dependencies": {
@@ -5530,6 +5536,25 @@
     }
   },
   "libraries": {
+    "BuildBundlerMinifier/2.5.357": {
+      "sha512": "kE/it+aN0DNmttXFYJSyBPGgzq4D4xg7W3KgRo917VP/wDb5bzH45u996pUrdoe9Zi54TGIS0Y3PEa42wvld2w==",
+      "type": "package",
+      "path": "buildbundlerminifier/2.5.357",
+      "files": [
+        "build/BuildBundlerMinifier.targets",
+        "buildbundlerminifier.2.5.357.nupkg.sha512",
+        "buildbundlerminifier.nuspec",
+        "tools/net46/BundlerMinifier.dll",
+        "tools/net46/NUglify.dll",
+        "tools/net46/Newtonsoft.Json.dll",
+        "tools/netcoreapp2.0/BundlerMinifier.dll",
+        "tools/netcoreapp2.0/NUglify.dll",
+        "tools/netcoreapp2.0/Newtonsoft.Json.dll",
+        "tools/netstandard1.3/BundlerMinifier.dll",
+        "tools/netstandard1.3/NUglify.dll",
+        "tools/netstandard1.3/Newtonsoft.Json.dll"
+      ]
+    },
     "Humanizer/2.2.0": {
       "sha512": "SggVx0oidiKLC9P8J5H9h1/+hwwACN+/G1jXRzYruPOxx2VqniV8RbV+zNOKKw2i1lmKPQyahW7iX/HB3KTddg==",
       "type": "package",
@@ -14025,6 +14050,7 @@
   },
   "projectFileDependencyGroups": {
     ".NETCoreApp,Version=v2.0": [
+      "BuildBundlerMinifier >= 2.5.357",
       "Humanizer >= 2.2.0",
       "Microsoft.AspNetCore.All >= 2.0.0",
       "Microsoft.EntityFrameworkCore.Tools >= 2.0.0",
@@ -14077,6 +14103,10 @@
             "target": "Package",
             "version": "2.0.0",
             "autoReferenced": true
+          },
+          "BuildBundlerMinifier": {
+            "target": "Package",
+            "version": "2.5.357"
           },
           "Humanizer": {
             "target": "Package",

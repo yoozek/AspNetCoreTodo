@@ -54,3 +54,20 @@ table tr.done {
     text-decoration: line-through;
     color: #888;
 }
+
+div[class^="col-"] {
+    padding-bottom: 0.5em;
+}
+
+@media (min-width: 768px) {
+    .row.equal {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+.add-button-col {
+    display: flex;
+    align-items: flex-end;
+    justify-content: left;
+}
