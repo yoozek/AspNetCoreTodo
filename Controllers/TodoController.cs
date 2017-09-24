@@ -2,6 +2,7 @@ using System.Threading.Tasks;
 using AspNetCoreTodo.Models;
 using AspNetCoreTodo.Services;
 using Microsoft.AspNetCore.Mvc;
+using System;
 
 namespace AspNetCoreTodo.Controllers
 {
@@ -38,6 +39,17 @@ namespace AspNetCoreTodo.Controllers
             {
                 return BadRequest(new { error = "Couldn't add new item"});
             }
+
+            return Ok();
+        }
+
+        public async Task<IActionResult> MarkDone(Guid id)
+        {
+            if (id == Guid.Empty) return BadRequest();
+
+            var successful = await _todoItemService.MarkDoneAsync(id);
+
+            if (!successful) return BadRequest();
 
             return Ok();
         }

@@ -6,7 +6,6 @@
     ViewData["Title"] = "Manage your todo list";
 }
 
-
 <div class="panel panel-default todo-panel">
     <div class="panel-heading">@ViewData["Title"]</div>
 
@@ -23,7 +22,7 @@
         {
             <tr>
                 <td>
-                    <input type="checkbox" name="@item.Id" value="true" class="done-checkbox">
+                    <input type="checkbox" name="@item.Id" value="@item.IsDone" class="done-checkbox">
                 </td>
                 <td>@item.Title</td>
                 <td>@item.DueAt.Humanize()</td>
